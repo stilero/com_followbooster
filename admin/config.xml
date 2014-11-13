@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <fieldset 
+        name="param_name" 
+        label="COM_INSTABOARD_SETTINGS_LABEL" 
+        addfieldpath="/administrator/components/com_instaboard/models/fields">
+        <field
+            name="createapp"
+            label="COM_INSTABOARD_SETTINGS_REDIRECT_URI_LABEL"
+            description="COM_INSTABOARD_SETTINGS_REDIRECT_URI_DESC"
+            type="createapp"
+            default="Create Instagram Client App"
+        />
+        <field
+            name="redirect_uri"
+            label="COM_INSTABOARD_SETTINGS_REDIRECT_URI_LABEL"
+            description="COM_INSTABOARD_SETTINGS_REDIRECT_URI_DESC"
+            type="redirecturi"
+            required="true" 
+            default=""
+        />
+        <field 
+            name="client_id" 
+            type="text" 
+            default="" 
+            label="COM_INSTABOARD_SETTINGS_CLIENT_ID_LABEL" 
+            description="COM_INSTABOARD_SETTINGS_CLIENT_ID_DESC"
+            required="true" 
+            size="50"
+        />
+        <field 
+            name="client_secret" 
+            type="password" 
+            default="" 
+            required="true" 
+            label="COM_INSTABOARD_SETTINGS_CLIENT_SECRET_LABEL" 
+            description="COM_INSTABOARD_SETTINGS_CLIENT_SECRET_DESC" 
+            size="50"
+        />
+        <field 
+            name="access_token" 
+            type="text" 
+            default="" 
+            label="Auth Token"
+            size="50"
+        />
+    </fieldset>	   
+    <fieldset
+        name="permissions"
+        label="JCONFIG_PERMISSIONS_LABEL"
+        description="JCONFIG_PERMISSIONS_DESC"
+    >
+        <field
+            name="rules"
+            type="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            class="inputbox"
+            validate="rules"
+            filter="rules"
+            component="com_instaimages"
+            section="component" 
+        />
+    </fieldset>	
+</config>
