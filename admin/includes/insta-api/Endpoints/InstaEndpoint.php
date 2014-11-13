@@ -29,7 +29,12 @@ class InstaEndpoint{
         $url = $this->requestUrl;
         $Communicator = new Communicator($url, $this->params);
         if($reqType!=''){
-            $Communicator->setCustomRequest($reqType);
+            if($reqType == 'POST'){
+                $Communicator->setPostVars($this->params);
+            }else{
+                $Communicator->setCustomRequest($reqType);  
+            }
+            
         }
         $Communicator->query();
         $jsonResponse = $Communicator->getResponse();

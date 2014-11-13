@@ -75,9 +75,12 @@ class InstaRelationships extends InstaEndpoint{
      * @return string JSON response
      */
     protected function setUserIdRelationship($user_id, $action){
-        $this->params = array('action' => $action);
-        $this->requestUrl = $this->requestUrl.$user_id.'/relationship/'
-                .'?access_token='.$this->accessToken;
+        $this->params = array(
+            'access_token' => $this->accessToken,
+            'action' => $action
+                );
+        $this->requestUrl = $this->requestUrl.$user_id.'/relationship/';
+                //.'?access_token='.$this->accessToken;
         $response = $this->query();
         return $response; 
     }
