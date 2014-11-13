@@ -2,19 +2,19 @@
 <config>
     <fieldset 
         name="param_name" 
-        label="COM_INSTABOARD_SETTINGS_LABEL" 
-        addfieldpath="/administrator/components/com_instaboard/models/fields">
+        label="COM_FOLLOWBOOSTER_SETTINGS_LABEL" 
+        addfieldpath="/administrator/components/com_followbooster/models/fields">
         <field
             name="createapp"
-            label="COM_INSTABOARD_SETTINGS_REDIRECT_URI_LABEL"
-            description="COM_INSTABOARD_SETTINGS_REDIRECT_URI_DESC"
+            label="COM_FOLLOWBOOSTER_SETTINGS_REDIRECT_URI_LABEL"
+            description="COM_FOLLOWBOOSTER_SETTINGS_REDIRECT_URI_DESC"
             type="createapp"
             default="Create Instagram Client App"
         />
         <field
             name="redirect_uri"
-            label="COM_INSTABOARD_SETTINGS_REDIRECT_URI_LABEL"
-            description="COM_INSTABOARD_SETTINGS_REDIRECT_URI_DESC"
+            label="COM_FOLLOWBOOSTER_SETTINGS_REDIRECT_URI_LABEL"
+            description="COM_FOLLOWBOOSTER_SETTINGS_REDIRECT_URI_DESC"
             type="redirecturi"
             required="true" 
             default=""
@@ -23,8 +23,8 @@
             name="client_id" 
             type="text" 
             default="" 
-            label="COM_INSTABOARD_SETTINGS_CLIENT_ID_LABEL" 
-            description="COM_INSTABOARD_SETTINGS_CLIENT_ID_DESC"
+            label="COM_FOLLOWBOOSTER_SETTINGS_CLIENT_ID_LABEL" 
+            description="COM_FOLLOWBOOSTER_SETTINGS_CLIENT_ID_DESC"
             required="true" 
             size="50"
         />
@@ -33,13 +33,20 @@
             type="password" 
             default="" 
             required="true" 
-            label="COM_INSTABOARD_SETTINGS_CLIENT_SECRET_LABEL" 
-            description="COM_INSTABOARD_SETTINGS_CLIENT_SECRET_DESC" 
+            label="COM_FOLLOWBOOSTER_SETTINGS_CLIENT_SECRET_LABEL" 
+            description="COM_FOLLOWBOOSTER_SETTINGS_CLIENT_SECRET_DESC" 
+            size="50"
+        />
+        <field 
+            name="tag" 
+            type="text" 
+            default="" 
+            label="Tag"
             size="50"
         />
         <field 
             name="access_token" 
-            type="text" 
+            type="hidden" 
             default="" 
             label="Auth Token"
             size="50"

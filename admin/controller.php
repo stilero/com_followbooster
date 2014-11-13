@@ -1,13 +1,12 @@
 <?php
 /**
- * Main admin Controller
+ * Description of com_followbooster
  *
  * @version  1.0
- * @author Daniel Eliasson - joomla at stilero.com
- * @copyright  (C) 2012-okt-21 Stilero Webdesign http://www.stilero.com
+ * @author Daniel Eliasson <daniel at stilero.com>
+ * @copyright  (C) 2014-nov-13 Stilero Webdesign (http://www.stilero.com)
  * @category Components
- * @license	GPLv2
- * 
+ * @license	GPLv2 
  */
 
 // no direct access
@@ -16,12 +15,13 @@ defined('_JEXEC') or die('Restricted access');
 // import joomla controller library
 jimport('joomla.application.component.controller');
 
-class InstaboardController extends JControllerLegacy{
+class FollowboosterController extends JControllerLegacy{
     
-    public static $modelName = 'feed';
-    public static $viewName = 'feed';
+    public static $modelName = 'instagram';
+    public static $viewName = 'instagram';
     
     public function display($cachable = false, $urlparams = false){
+        //Set Default View and Model
         $view = $this->getView( self::$viewName, 'html' );
         $model = $this->getModel(  self::$modelName );
         $view->setModel( $model, true );
